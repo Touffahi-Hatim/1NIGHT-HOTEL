@@ -1,5 +1,5 @@
-<html <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +11,11 @@
                 font-family: 'Arial', sans-serif;
                 margin: 0;
                 padding: 0;
-                background-color: #f4f4f4;
+                background: url('img/background.jpg') no-repeat center center fixed;
                 color: #333;
                 line-height: 1.6;
                 width: 100%;
+                overflow-x: hidden; /* Prevent horizontal scrolling */
             }
             .nav {                
                 background-color: #333;
@@ -72,15 +73,18 @@
                 
             }
             .gallery img {
-                width: 30%;
+                width: calc(33.33% - 40px); /* Adjust width to account for margins */
                 border-radius: 10px;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-                margin: 20px 20px;
+                margin: 20px; /* Keep margin for spacing */
                 transition: transform 0.3s, box-shadow 0.3s;
             }
             .gallery img:hover {
                 transform: scale(1.05);
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            }
+            * {
+                 box-sizing: border-box;
             }
             footer {
                 text-align: center;
